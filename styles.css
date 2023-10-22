@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+	--primary-light-red: hsl(0, 100%, 67%);
+	--primary-orangey-yellow: hsl(39, 100%, 56%);
+	--primary-green-teal: hsl(166, 100%, 37%);
+	--primary-cobalt-blue: hsl(234, 85%, 45%);
+
+	--gradient-slate-blue: hsl(252, 100%, 67%);
+	--gradient-royal-blue: hsl(241, 81%, 54%);
+	--gradient-violet-blue: hsla(256, 72%, 46%, 1);
+	--gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+	--neutral-white: hsl(0, 0%, 100%);
+	--neutral-pale-blue: hsl(221, 100%, 96%);
+	--neutral-light-lavender: hsl(241, 100%, 89%);
+	--neutral-gray-blue: hsl(224, 30%, 27%);
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1.8rem;
+	font-family: 'Hanken Grotesk', sans-serif;
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	text-align: center;
+}
+
+.result {
+	background: linear-gradient(
+		var(--gradient-slate-blue),
+		var(--gradient-royal-blue)
+	);
+	border-radius: 0 0 10% 10%;
+}
+
+.result-header {
+	opacity: 0.5;
+	color: var(--neutral-white);
+	font-weight: 500;
+	font-size: 1.8rem;
+	padding: 2.5rem;
+}
+
+.total-score {
+	margin: 0 auto;
+	background: linear-gradient(
+		var(--gradient-violet-blue),
+		var(--gradient-royal-blue)
+	);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 5rem;
+	color: var(--neutral-white);
+	width: 14rem;
+	height: 14rem;
+}
+
+.total-score p {
+	font-size: 1.5rem;
+	opacity: 0.4;
+	font-weight: 500;
+	color: var(--neutral-white);
+}
+
+.result-subheader {
+	padding-top: 2.5rem;
+	padding-bottom: 1rem;
+	color: var(--neutral-white);
+	font-size: 2.2rem;
+}
+
+.result-desc {
+	font-size: 1.6rem;
+	margin: 0 auto;
+	color: var(--neutral-white);
+	opacity: 0.5;
+	font-weight: 500;
+	max-width: 70%;
+	padding-bottom: 4rem;
+}
+
+.summary {
+	text-align: left;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.summary-header {
+	font-size: 2.2rem;
+	padding: 2rem 0 2rem 0;
+}
+
+.category {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	border-radius: 10px;
+	margin-bottom: 1.5rem;
+}
+
+.category div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.category div img {
+	padding-right: 1rem;
+}
+
+.score {
+	color: black;
+	font-weight: 800;
+}
+
+.subscore {
+	font-weight: 500;
+	opacity: 0.5;
+	font-size: 1.7rem;
+}
+
+.red {
+	color: var(--primary-light-red);
+	background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.yellow {
+	color: var(--primary-orangey-yellow);
+	background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.green {
+	color: var(--primary-green-teal);
+	background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.blue {
+	color: var(--primary-cobalt-blue);
+	background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.continue {
+	width: 100%;
+	margin-top: 1rem;
+	padding: 2rem 2rem;
+	font-weight: 700;
+	font-size: 1.7rem;
+	color: var(--neutral-white);
+	outline: 0;
+	border: 0;
+	background-color: var(--neutral-gray-blue);
+	border-radius: 50px;
+}
+
+.attribution {
+	margin-top: 1rem;
+	font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 1.8rem;
+		font-family: 'Hanken Grotesk', sans-serif;
+		min-height: 100vh;
+		min-width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.result {
+		border-radius: 10% 0 0 10%;
+		width: 350px;
+		height: 450px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.total-score {
+		font-size: 6rem;
+		color: var(--neutral-white);
+		width: 17rem;
+		height: 17rem;
+	}
+
+	.result-subheader {
+		font-size: 3rem;
+		margin-top: 4rem;
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.result-desc {
+		font-size: 1.8rem;
+	}
+
+	.summary {
+		border-radius: 0 10% 10% 0;
+		width: 350px;
+		height: 450px;
+		box-shadow: 15px 15px 50px 10px rgba(2, 5, 96, 0.1);
+	}
+
+	.category {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5rem;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+	}
+
+	.continue {
+		width: 100%;
+		margin-top: 3rem;
+		padding: 1.8rem;
+		font-weight: 700;
+		font-size: 1.6rem;
+	}
+}
